@@ -6,8 +6,13 @@ import './plugins/element.js'
 import './assets/css/global.css'
 
 import axios from 'axios'
-axios.defaults.baseURL = '127.0.0.1/api'
-Vue.prototype.$http = axios
+axios.interceptors.request.use(config => {
+  // 最后必须return
+  config.headers.Authorization = sessionStorage.getItem('token')
+  return config
+})
+axios.defaults.baseURL = '127.0.0.1/api/'
+Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
 
