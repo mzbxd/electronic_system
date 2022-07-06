@@ -6,7 +6,8 @@ import {
   Breadcrumb, BreadcrumbItem, Card, Row, Col,
   Table, TableColumn, Switch, Tooltip, Pagination,
   Dialog, MessageBox, Tag, Tree, Checkbox,
-  Select, Option, Cascader
+  Select, Option, Cascader, Alert,
+  Tabs, TabPane
 } from 'element-ui'
 
 Vue.use(Button).use(Form).use(FormItem).use(Input)
@@ -15,7 +16,8 @@ Vue.use(Button).use(Form).use(FormItem).use(Input)
   .use(Breadcrumb).use(Card).use(Row).use(Col).use(BreadcrumbItem)
   .use(Table).use(TableColumn).use(Switch).use(Tooltip).use(Pagination)
   .use(Dialog).use(Tag).use(Tree).use(Checkbox)
-  .use(Select).use(Option).use(Cascader)
+  .use(Select).use(Option).use(Cascader).use(Alert)
+  .use(Tabs).use(TabPane)
 
 Vue.prototype.$message = Message
 Vue.prototype.confirm = MessageBox.confirm
